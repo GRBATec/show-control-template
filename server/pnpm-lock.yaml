@@ -1,0 +1,49 @@
+lockfileVersion: "9.0"
+
+settings:
+    autoInstallPeers: true
+    excludeLinksFromLockfile: false
+
+importers:
+    .:
+        devDependencies:
+            prettier:
+                specifier: ^3.2.5
+                version: 3.2.5
+            tsc:
+                specifier: ^2.0.4
+                version: 2.0.4
+            typescript:
+                specifier: ^5.4.5
+                version: 5.4.5
+
+packages:
+    prettier@3.2.5:
+        resolution:
+            {
+                integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==,
+            }
+        engines: { node: ">=14" }
+        hasBin: true
+
+    tsc@2.0.4:
+        resolution:
+            {
+                integrity: sha512-fzoSieZI5KKJVBYGvwbVZs/J5za84f2lSTLPYf6AGiIf43tZ3GNrI1QzTLcjtyDDP4aLxd46RTZq1nQxe7+k5Q==,
+            }
+        hasBin: true
+
+    typescript@5.4.5:
+        resolution:
+            {
+                integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==,
+            }
+        engines: { node: ">=14.17" }
+        hasBin: true
+
+snapshots:
+    prettier@3.2.5: {}
+
+    tsc@2.0.4: {}
+
+    typescript@5.4.5: {}

@@ -1,0 +1,21 @@
+{
+    "name": "backend",
+    "type": "commonjs",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "node --env-file=.env dist/index.js",
+        "build": "tsc",
+        "format": "prettier --write ."
+    },
+    "devDependencies": {
+        "prettier": "^3.2.5",
+        "tsc": "^2.0.4",
+        "typescript": "^5.4.5"
+    },
+    "main": "./dist/index.js",
+    "files": [
+        "./bin/*",
+        "./dist/*"
+    ],
+    "typings": "./dist/index.d.ts"
+}
