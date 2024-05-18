@@ -12,6 +12,7 @@
     "dependencies": {
         "@astrojs/check": "^0.7.0",
         "astro": "^4.8.6",
+        "socket.io-client": "^4.7.5",
         "typescript": "^5.4.5"
     },
     "devDependencies": {
