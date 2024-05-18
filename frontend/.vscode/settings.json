@@ -1,5 +1,6 @@
 {
     "git.openRepositoryInParentFolders": "always",
     "git.defaultBranchName": "master",
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "prettier.documentSelectors": ["**/*.astro"]
 }
