@@ -1,0 +1,18 @@
+---
+import type { AgendaPointType } from "../content/config";
+
+const props = Astro.props;
+const data = props.data as AgendaPointType;
+const { Content } = await props.render();
+---
+
+<div class="grid grid-cols-7 w-11/12 px-3">
+    <div class="col-span-2">
+        <b class="font-semibold inline-flex">{data.time} Uhr <span class="font-medium opacity-60 hidden lg:block">&nbsp;-&nbsp;{data.date}</span></b>
+        <br />
+        {data.title}
+    </div>
+    <div class="col-span-5 text-start border-l-2 pl-2 border-stone-700">
+        <Content />
+    </div>
+</div>
