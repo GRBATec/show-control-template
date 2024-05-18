@@ -21,7 +21,8 @@ cd backend
 pnpm i
 pnpm build
 pnpm start
-# concrats the server is now running and accessible on http://localhost:3002 by any device on the same network
+# concrats the server is now running and accessible on http://localhost:3002 
+# any can be opended by any device on the same network
 ```
 
 ## Base Features
