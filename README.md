@@ -1,14 +1,13 @@
-# ATec ShowControl - Plain
+# ATec ShowControl - Template
 
 ATec ShowControl is intended to be run on a local mobile device on any event to control the show.
 It is a web application that can be accessed by any device with a web browser.
 
 ## Usage
 
-The `master` branch contains the plain or base version to start creating a new show control system for a specific event.
-Simply clone this branch to a new one and start adding your configurations and features.
+The `master` branch contains a base version to start creating a new show control system for a specific event.
 
-Clone the repository and run the following commands:
+To run the web app, run the following commands:
 
 ```bash
 # frontend build
