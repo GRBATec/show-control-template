@@ -27,6 +27,5 @@ pnpm start
 ## Base Features
 
 -   `/beamer` view - display informations, like a timer or the school logo, publicly for the audience
--   `/ipad` view - display any content on an ipad or any other device to give the client, for example the speaker, a student or a teacher, the ability to see the current state of the show
 -   `/admin/*` view - control the show, like starting the timer, changing texts being displayed
 -   `/agenda` view - display the agenda of the event

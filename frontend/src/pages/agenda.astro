@@ -9,7 +9,7 @@ const agendaPoints = await getCollection("agenda");
 ---
 
 <BaseLayout>
-    <main class="bg-stone-900 min-h-svh w-full flex flex-col items-center gap-3">
+    <main class="min-h-svh w-full flex flex-col items-center gap-3">
         <Clock class="text-6xl font-mono my-4 px-2 border-b-4 w-fit" client:load />
         {
             agendaPoints.map((point: { data: AgendaPointType }) => (

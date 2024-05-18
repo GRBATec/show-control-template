@@ -13,6 +13,6 @@ html {
 body {
     padding: 0;
     margin: 0;
-    @apply bg-black;
+    @apply bg-stone-900;
     @apply text-white;
 }
