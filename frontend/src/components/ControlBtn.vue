@@ -23,8 +23,8 @@ export default {
 <template>
     <button
         @click="sendAction"
-        class="font-semi-bold rounded border-2 border-transparent bg-neutral-800 px-3 py-1 text-lg transition-colors duration-300 ease-out hover:border-neutral-300"
+        class="font-semi-bold rounded border-2 border-transparent bg-neutral-800 px-3 py-1 text-lg transition-colors duration-300 ease-out hover:border-neutral-300 active:border-neutral-300"
     >
-        {{ label }}
+        {{ label.toUpperCase() }}
     </button>
 </template>

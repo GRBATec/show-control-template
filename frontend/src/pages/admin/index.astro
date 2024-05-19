@@ -1,10 +1,12 @@
 ---
-import ControlBtn from "../../components/ControlBtn.vue";
+import AdminControl from "../../components/AdminControl.vue";
+import Clock from "../../components/Clock.vue";
 import BaseLayout from "../../layouts/base.astro";
 ---
 
 <BaseLayout>
-    <main>
-        <!-- <ControlBtn client:load label="Show Clock" wstarget="/beamer/show-clock" /> -->
+    <main class="flex min-h-svh w-full flex-col items-center gap-3">
+        <Clock class="my-4 w-fit border-b-4 px-2 font-mono text-6xl" client:load />
+        <AdminControl client:load />
     </main>
 </BaseLayout>
