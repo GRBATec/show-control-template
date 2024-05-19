@@ -8,14 +8,14 @@ import BaseLayout from "../../layouts/base.astro";
 
 <BaseLayout>
     <main class="flex min-h-svh w-full flex-col items-center gap-3">
-        <Clock class="my-4 w-fit border-b-4 px-2 font-mono text-6xl" client:only />
+        <Clock class="my-4 w-fit border-b-4 px-2 font-mono text-6xl" client:load />
         <section class="grid w-4/5 grid-cols-3 grid-rows-2 gap-3">
-            <ControlBtn client:load label="No Content" wstarget="/beamer/show-clock" />
-            <ControlBtn client:load label="Show Clock" wstarget="/beamer/show-clock" />
-            <ControlBtn client:load label="Start Timer" wstarget="/beamer/show-clock" />
-            <ControlBtn client:load label="Plain Text" wstarget="/beamer/show-clock" />
-            <ControlBtn client:load label="GRB Text" wstarget="/beamer/show-clock" />
-            <ControlBtn client:load label="ATec Text" wstarget="/beamer/show-clock" />
+            <ControlBtn client:load label="No Content" wstarget="beamer/no-content" />
+            <ControlBtn client:load label="Show Clock" wstarget="beamer/show-clock" />
+            <ControlBtn client:load label="Start Timer" wstarget="beamer/show-timer" />
+            <ControlBtn client:load label="Plain Text" wstarget="beamer/plain-text" />
+            <ControlBtn client:load label="GRB Text" wstarget="beamer/grb-text" />
+            <ControlBtn client:load label="ATec Text" wstarget="beamer/atec-text" />
         </section>
         <TimerSetter client:load />
         <span class="h-0.5 w-11/12 rounded bg-white opacity-50 last:hidden"></span>

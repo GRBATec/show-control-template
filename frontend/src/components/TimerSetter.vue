@@ -22,14 +22,11 @@ export default {
     },
     methods: {
         timeToSeconds() {
-            return (
-                this.times.hours.first * 36000 +
-                this.times.hours.second * 3600 +
-                this.times.minutes.first * 600 +
-                this.times.minutes.second * 60 +
-                this.times.seconds.first * 10 +
-                this.times.seconds.second
-            );
+            const nowInMs = Date.now();
+            const hours = parseInt(`${this.times.hours.first}${this.times.hours.second}`) * 3600 * 1000;
+            const minutes = parseInt(`${this.times.minutes.first}${this.times.minutes.second}`) * 60 * 1000;
+            const seconds = parseInt(`${this.times.seconds.first}${this.times.seconds.second}`) * 1000;
+            return nowInMs + hours + minutes + seconds;
         },
         isValidTimeUnit(value) {
             return Number.isInteger(value) && value >= 0 && value <= 9;

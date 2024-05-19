@@ -4,12 +4,12 @@ import socket from "../services/Socket";
 export default {
     data() {
         return {
-            text: "",
+            beamerText: "",
         };
     },
     watch: {
-        text: () => {
-            socket.emit("set_text", this.text?.toString() ?? "");
+        beamerText() {
+            socket.emit("set_text", this.beamerText.toString());
         },
     },
 };
@@ -17,7 +17,7 @@ export default {
 
 <template>
     <input
-        v-model="text"
+        v-model="beamerText"
         type="text"
         placeholder="Enter text here..."
         class="w-4/5 rounded border-2 border-transparent bg-neutral-800 px-3 py-1 text-lg outline-none transition-colors duration-300 ease-out focus:border-neutral-300"
