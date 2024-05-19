@@ -1,9 +1,9 @@
 ---
-import BaseLayout from "../layouts/base.astro";
+import BaseLayout from "../../layouts/base.astro";
 import { getCollection } from "astro:content";
-import { type AgendaPointType } from "../content/config";
-import AgendaPoint from "../components/AgendaPoint.astro";
-import Clock from "../components/Clock.vue";
+import { type AgendaPointType } from "../../content/config";
+import AgendaPoint from "../../components/AgendaPoint.astro";
+import Clock from "../../components/Clock.vue";
 
 const agendaPoints = await getCollection("agenda");
 ---

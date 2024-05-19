@@ -1,0 +1,29 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/base.astro";
+import type { AgendaPointType } from "../../content/config";
+import Clock from "../../components/Clock.vue";
+
+export async function getStaticPaths() {
+    const agendaPoints = await getCollection("agenda");
+    return agendaPoints.map((point) => ({
+        params: { slug: point.slug },
+        props: { point },
+    }));
+}
+
+const { point } = Astro.props;
+const data = point.data as AgendaPointType;
+const { Content } = await point.render();
+---
+
+<BaseLayout>
+    <main class="flex min-h-svh w-full flex-col items-center">
+        <Clock class="mt-4 mb-1 w-fit px-2 font-mono text-xl font-medium text-neutral-500" client:load />
+        <h1 class="text-3xl font-bold">{data.title}</h1>
+        <b class="inline-flex font-semibold text-neutral-200"> {data.time} Uhr&nbsp;-&nbsp;{data.date}</b>
+        <div class="px-10 py-4">
+            <Content />
+        </div>
+    </main>
+</BaseLayout>

@@ -6,19 +6,22 @@ const data = props.data as AgendaPointType;
 const { Content } = await props.render();
 ---
 
-<div class="grid grid-cols-7 w-11/12 px-3">
+<div class="grid w-11/12 grid-cols-7 px-3">
     <div class="col-span-2">
-        <b class="font-semibold inline-flex"
-            >{data.time} Uhr <span class="font-medium opacity-60 hidden lg:block">&nbsp;-&nbsp;{data.date}</span></b
+        <b class="inline-flex font-semibold"
+            >{data.time} Uhr <span class="hidden font-medium opacity-60 lg:block">&nbsp;-&nbsp;{data.date}</span></b
         >
-        <span class="hidden lg:block">
+        <a href={props.slug} class="hidden lg:block">
             {data.title}
-        </span>
+        </a>
     </div>
-    <div class="col-span-5 text-start border-l-2 pl-2 border-stone-700">
-        <b class="font-semibold block lg:hidden">
+    <a href={props.slug} class="col-span-5 border-l-2 border-stone-700 pl-2 text-start">
+        <b class="block font-semibold lg:hidden">
             {data.title}
         </b>
-        <Content />
-    </div>
+        <div class="max-h-24 overflow-y-hidden">
+            <Content />
+        </div>
+        <p>...</p>
+    </a>
 </div>
