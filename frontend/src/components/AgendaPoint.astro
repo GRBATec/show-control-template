@@ -1,5 +1,6 @@
 ---
 import type { AgendaPointType } from "../content/config";
+import MarkdownRendered from "./MarkdownRendered.astro";
 
 const props = Astro.props;
 const data = props.data as AgendaPointType;
@@ -19,9 +20,10 @@ const { Content } = await props.render();
         <b class="block font-semibold lg:hidden">
             {data.title}
         </b>
-        <div class="max-h-24 overflow-y-hidden">
-            <Content />
+        <div class="max-h-20 overflow-y-hidden">
+            <MarkdownRendered>
+                <Content />
+            </MarkdownRendered>
         </div>
-        <p>...</p>
     </a>
 </div>

@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/base.astro";
+import MarkdownRendered from "../../components/MarkdownRendered.astro";
 import type { AgendaPointType } from "../../content/config";
 import Clock from "../../components/Clock.vue";
 
@@ -19,11 +20,13 @@ const { Content } = await point.render();
 
 <BaseLayout>
     <main class="flex min-h-svh w-full flex-col items-center">
-        <Clock class="mt-4 mb-1 w-fit px-2 font-mono text-xl font-medium text-neutral-500" client:load />
+        <Clock class="mb-1 mt-4 w-fit px-2 font-mono text-xl font-medium text-neutral-500" client:load />
         <h1 class="text-3xl font-bold">{data.title}</h1>
         <b class="inline-flex font-semibold text-neutral-200"> {data.time} Uhr&nbsp;-&nbsp;{data.date}</b>
         <div class="px-10 py-4">
-            <Content />
+            <MarkdownRendered>
+                <Content />
+            </MarkdownRendered>
         </div>
     </main>
 </BaseLayout>

@@ -10,10 +10,6 @@ It is a web application that can be accessed by any device with a web browser.
 -   `/agenda` - overview of the agenda of the event
 -   `/agenda/*` - details of one agenda item
 
-## ToDos
-
--  [ ] real markdown rendering for agenda
-
 ## Usage
 
 ### Installation and Running
