@@ -12,8 +12,8 @@ export default {
     },
     data() {
         return {
-            text: "",
-            mode: "off" as BeamerViewMode,
+            text: "Beamer",
+            mode: "text" as BeamerViewMode,
         };
     },
 };
