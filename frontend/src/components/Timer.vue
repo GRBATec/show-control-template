@@ -17,7 +17,7 @@ export default {
             const end = parseInt(this.unix_end);
             const diff = end - now;
             if (diff <= 0) {
-                this.time = "00:00:00";
+                this.time = "00:00";
                 return;
             }
             const hours = Math.floor(diff / 1000 / 60 / 60);

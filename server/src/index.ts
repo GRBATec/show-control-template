@@ -12,43 +12,35 @@ io.on("connection", (socket) => {
     console.log("a user connected");
 
     socket.on("set_timer", (time) => {
-        console.log("setting timer", time);
-        // TODO: broadcast the time to all clients
+        socket.broadcast.emit("beamer/set_timer", time);
     });
 
     socket.on("set_text", (text) => {
-        console.log("setting text to", text);
-        // TODO: broadcast the text to all clients
+        socket.broadcast.emit("beamer/set_text", text);
     });
 
     socket.on("beamer/no-content", () => {
-        console.log("beamer/no-content");
-        // TODO: broadcast the event to all clients
+        socket.broadcast.emit("beamer/view/no-content");
     });
 
     socket.on("beamer/show-clock", () => {
-        console.log("beamer/show-clock");
-        // TODO: broadcast the event to all clients
+        socket.broadcast.emit("beamer/view/show-clock");
     });
 
     socket.on("beamer/show-timer", () => {
-        console.log("beamer/show-timer");
-        // TODO: broadcast the event to all clients
+        socket.broadcast.emit("beamer/view/show-timer");
     });
 
     socket.on("beamer/plain-text", () => {
-        console.log("beamer/plain-text");
-        // TODO: broadcast the event to all clients
+        socket.broadcast.emit("beamer/view/plain-text");
     });
 
     socket.on("beamer/grb-text", () => {
-        console.log("beamer/grb-text");
-        // TODO: broadcast the event to all clients
+        socket.broadcast.emit("beamer/view/grb-text");
     });
 
     socket.on("beamer/atec-text", () => {
-        console.log("beamer/atec-text");
-        // TODO: broadcast the event to all clients
+        socket.broadcast.emit("beamer/view/atec-text");
     });
 
     socket.on("disconnect", () => {
