@@ -23,7 +23,7 @@ const { Content } = await point.render();
         <Clock class="mb-1 mt-4 w-fit px-2 font-mono text-xl font-medium text-neutral-500" client:load />
         <h1 class="text-3xl font-bold">{data.title}</h1>
         <b class="inline-flex font-semibold text-neutral-200"> {data.time} Uhr&nbsp;-&nbsp;{data.date}</b>
-        <div class="px-10 py-4">
+        <div class="max-w-prose w-full">
             <MarkdownRendered>
                 <Content />
             </MarkdownRendered>
