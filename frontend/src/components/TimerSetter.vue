@@ -28,12 +28,13 @@ export default {
             const seconds = parseInt(`${this.times.seconds.first}${this.times.seconds.second}`) * 1000;
             return nowInMs + hours + minutes + seconds;
         },
-        isValidTimeUnit(value) {
+        isValidTimeUnit(value: number) {
             return Number.isInteger(value) && value >= 0 && value <= 9;
         },
         validateTimes() {
             for (const unit of ["hours", "minutes", "seconds"]) {
                 for (const part of ["first", "second"]) {
+                    // @ts-ignore
                     const value = this.times[unit][part];
                     if (!this.isValidTimeUnit(value)) {
                         return false;
@@ -58,18 +59,18 @@ export default {
 
 <template>
     <div class="flex flex-row items-center font-mono">
-        <input v-model.number="times.hours.first" type="text" minlength="1" maxlength="1" class="number_select" />
-        <input v-model.number="times.hours.second" type="text" minlength="1" maxlength="1" class="number_select" />
+        <input v-model.number="times.hours.first" type="text" inputmode="numeric" pattern="[0-9]" minlength="1" maxlength="1" class="number_select" />
+        <input v-model.number="times.hours.second" type="text" inputmode="numeric" pattern="[0-9]" minlength="1" maxlength="1" class="number_select" />
 
         <span class="text-4xl">:</span>
 
-        <input v-model.number="times.minutes.first" type="text" minlength="1" maxlength="1" class="number_select" />
-        <input v-model.number="times.minutes.second" type="text" minlength="1" maxlength="1" class="number_select" />
+        <input v-model.number="times.minutes.first" type="text" inputmode="numeric" pattern="[0-9]" minlength="1" maxlength="1" class="number_select" />
+        <input v-model.number="times.minutes.second" type="text" inputmode="numeric" pattern="[0-9]" minlength="1" maxlength="1" class="number_select" />
 
         <span class="text-4xl">:</span>
 
-        <input v-model.number="times.seconds.first" type="text" minlength="1" maxlength="1" class="number_select" />
-        <input v-model.number="times.seconds.second" type="text" minlength="1" maxlength="1" class="number_select" />
+        <input v-model.number="times.seconds.first" type="text" inputmode="numeric" pattern="[0-9]" minlength="1" maxlength="1" class="number_select" />
+        <input v-model.number="times.seconds.second" type="text" inputmode="numeric" pattern="[0-9]" minlength="1" maxlength="1" class="number_select" />
     </div>
 </template>
 

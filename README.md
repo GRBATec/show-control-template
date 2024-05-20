@@ -48,6 +48,10 @@ Note: the agenda is getting is displayed in the order of the files in the folder
 
 You can configure the images in `frontend/public`.
 
+#### Admin Panel Buttons
+
+You can configure the buttons in the array in `frontend/src/config/AdminButtons.ts`.
+
 #### More
 
 For more configuration you need to rewrite and change code. For the frontend: reactive/ non-static components/ pages are written in Vue.js.

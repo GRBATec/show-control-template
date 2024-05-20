@@ -11,10 +11,14 @@ export default {
             type: String,
             required: true,
         },
+        wsargs: {
+            type: Object,
+            default: undefined,
+        },
     },
     methods: {
         sendAction() {
-            socket.emit(this.wstarget);
+            socket.emit(this.wstarget, this.wsargs);
         },
     },
 };
